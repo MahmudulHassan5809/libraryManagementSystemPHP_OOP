@@ -2,6 +2,10 @@
 <?php include 'inc/include.php'; ?>
 <!-- End Of include.php -->
 
+<!-- Check Login -->
+<?php Session::checkLibrarianLogin(); ?>
+<!-- End Of Check Login -->
+
 <!-- Passed Form Input To Librarian Class -->
   <?php
     if($_SERVER['REQUEST_METHOD']== 'POST' && isset($_POST['login'])){

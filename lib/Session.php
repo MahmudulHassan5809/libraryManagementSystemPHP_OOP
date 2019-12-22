@@ -33,7 +33,15 @@
 
      public static function checkSession(){
       self::init();
-      if (self::get("userlogin")== false) {
+      if (self::get("userlogin") == false) {
+       self::destroy();
+       header("Location:login.php");
+      }
+     }
+
+     public static function checkLibrarianSession(){
+      self::init();
+      if (self::get("librarianlogin") == false) {
        self::destroy();
        header("Location:login.php");
       }
@@ -44,6 +52,13 @@
       self::init();
       if (self::get("userlogin")== true) {
        header("Location:display_all_books.php");
+      }
+     }
+
+     public static function checkLibrarianLogin(){
+      self::init();
+      if (self::get("librarianlogin")== true) {
+       header("Location:student_info.php");
       }
      }
 

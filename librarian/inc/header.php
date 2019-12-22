@@ -2,6 +2,10 @@
 <?php include 'include.php'; ?>
 <!-- End Of include.php -->
 
+<!-- Check Session -->
+<?php Session::checkLibrarianSession(); ?>
+<!-- End Of Check Session -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
