@@ -211,6 +211,10 @@ include_once ($filepath.'/../../helpers/Format.php') ;
         }
   }
 
+  public function logOut(){
+     Session::destroy();
+  }
+
 
 
 }
